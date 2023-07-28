@@ -9,7 +9,6 @@ module.exports = {
     plugins: [
         // "gatsby-plugin-google-gtag",
         // "gatsby-plugin-sitemap",
-        `gatsby-plugin-sass`,
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
