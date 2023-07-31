@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `beatx`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     // "gatsby-plugin-google-gtag",
@@ -12,7 +12,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/playblk.png"
-      }
-    }]
+        "icon": "src/images/playblk.png",
+      },
+    },
+    'gatsby-plugin-styled-components',
+  ],
 };
