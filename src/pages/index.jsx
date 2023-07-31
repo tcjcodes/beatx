@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
+import MusicPlayer from '../components/MusicPlayer';
 
-const Player = styled.div`
+const PlayerContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10,15 +11,15 @@ const Player = styled.div`
   border: 3px solid green;
   padding: 2em;
   text-align: center;
-  width: 300px;
+  //width: 300px;
 `;
 
 const IndexPage = () => {
   return (<Layout>
     <div className="container">
-      <Player>
-        <p>hello world</p>
-      </Player>
+      <PlayerContainer>
+        <MusicPlayer/>
+      </PlayerContainer>
     </div>
   </Layout>)
 }
