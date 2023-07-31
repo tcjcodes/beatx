@@ -8,14 +8,13 @@ import Seeker from './Seeker';
 // const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
 
 const PlayerContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  //border: 3px solid green;
+  //position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  //border: 1px solid green;
   padding: 2em;
   text-align: center;
-  width: 720px;
 
   display: flex;
   flex-direction: column;
@@ -42,7 +41,7 @@ const Controls = styled.div`
 
 const SeekerWrapper = styled.div`
   margin-top: 8px;
-  width: 700px;
+  width: 680px;
 `;
 const MusicPlayer = () => (
     <PlayerContainer>
