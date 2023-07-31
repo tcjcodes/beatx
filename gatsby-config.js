@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `beatx`,
-    siteUrl: `TODO`,
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     // "gatsby-plugin-google-gtag",

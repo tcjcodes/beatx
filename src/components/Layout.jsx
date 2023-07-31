@@ -1,11 +1,12 @@
-import React from "react"
+import React from 'react';
+import styled from 'styled-components';
 
-const mainStyle = {
-    backgroundColor: '#000',
-    color: 'white',
-    fontFamily: `"Roboto Mono", Menlo, monospace`,
-}
+const LayoutWrapper = styled.div`
+  color: #fff;
+  font-family: "Roboto Mono", Menlo, monospace;
+  font-size: 12px;
+`;
 
 export default function Layout({children}) {
-    return <div style={mainStyle}>{children}</div>
+  return <LayoutWrapper>{children}</LayoutWrapper>;
 }
