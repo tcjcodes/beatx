@@ -1,10 +1,11 @@
 import React from 'react';
+import Expand from '../components/Expand';
 import Layout from '../components/layout';
 import MusicPlayer from '../components/MusicPlayer';
 import TrackList from '../components/TrackList';
 import styled from 'styled-components';
 
-const PageContainer = styled.main`
+const IndexContainer = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,21 +18,13 @@ const PageContainer = styled.main`
   border: 1px solid cyan;
 `;
 
-const ExpandContainer = styled.section`
-  width: 90%;
-  text-align: right;
-`;
-const ExpandText = styled.span`
-  font-size: 12px;
-`;
 const IndexPage = () => {
   return (<Layout>
-    <PageContainer>
+    <IndexContainer>
       <MusicPlayer/>
-      <ExpandContainer><ExpandText>expand ↓</ExpandText></ExpandContainer>
-
+      <Expand expanded/>
       <TrackList/>
-    </PageContainer>
+    </IndexContainer>
   </Layout>);
 };
 
