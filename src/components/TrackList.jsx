@@ -1,18 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import songs from '../data/songs.json';
+import Track from './Track';
 
-const TrackListContainer = styled.div`
+const TrackListContainer = styled.section`
   border: 1px solid grey;
-  width: 100%;
+  width: 768px;
+  padding: 8px 16px;
 `;
 
-;
-const TrackList = () => <TrackListContainer>
-  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => <TrackList
-      key={i}
-      title={`M` + i}
-      date={`12/${i}/2023`}/>)}
-</TrackListContainer>;
+const TrackList = () => {
+  return (<TrackListContainer>
+    {songs.map((song, i) => <Track
+        key={song.track}
+        title={song.title}
+        date={`12/${i + 1}/2023`}/>)}
+  </TrackListContainer>);
+};
 
 export default TrackList;
 

@@ -7,12 +7,7 @@ import FastForwardIcon from './icons/FastForwardIcon';
 import Seeker from './Seeker';
 // const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
 
-const PlayerContainer = styled.div`
-  //position: absolute;
-  //top: 50%;
-  //left: 50%;
-  //transform: translate(-50%, -50%);
-  //border: 1px solid green;
+const PlayerContainer = styled.section`
   padding: 2em;
   text-align: center;
 

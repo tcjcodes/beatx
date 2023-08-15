@@ -10,14 +10,14 @@ const PageContainer = styled.main`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 768px;
+  width: ${768 + 16}px;
   height: 100vh;
   padding: 8px;
 
   border: 1px solid cyan;
 `;
 
-const ExpandContainer = styled.div`
+const ExpandContainer = styled.section`
   width: 90%;
   text-align: right;
 `;
