@@ -5,16 +5,18 @@ import RewindIcon from './icons/RewindIcon';
 import PlayIcon from './icons/PlayIcon';
 import FastForwardIcon from './icons/FastForwardIcon';
 import Seeker from './Seeker';
+import MainSection from './MainSection';
 // const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
 
-const PlayerContainer = styled.section`
-  padding: 2em;
+const PlayerContainer = styled(MainSection)`
+  margin-bottom: ${8 * 12}px;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 160px;
+  //border: 1px solid yellow;
 `;
 const Icon = styled.div`
   font-size: 32px;
@@ -36,7 +38,8 @@ const Controls = styled.div`
 
 const SeekerWrapper = styled.div`
   margin-top: 8px;
-  width: 680px;
+  width: 100%;
+  padding: 0 24px;
 `;
 const MusicPlayer = () => (
     <PlayerContainer>

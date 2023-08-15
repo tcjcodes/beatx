@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const TrackContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
   padding: 16px 24px;
   border: ${props => props.$active ? '2px solid #fff' : 'none'};
 `;

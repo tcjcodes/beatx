@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import songs from '../data/songs.json';
 import Track from './Track';
+import MainSection from './MainSection';
 
-const TrackListContainer = styled.section`
+const TrackListContainer = styled(MainSection)`
   border: 1px solid grey;
   width: 768px;
   padding: 8px 16px;
