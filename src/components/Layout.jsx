@@ -1,12 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {ThemeProvider} from 'styled-components';
+import theme from '../styles/theme';
 
 const LayoutWrapper = styled.div`
-  color: #fff;
-  font-family: "Roboto Mono", Menlo, monospace;
-  font-size: 12px;
+  color: ${props => props.theme.color};
+  font-family: ${props => props.theme.fontFamily};
+  font-size: ${props => props.theme.bodyFont};
 `;
 
 export default function Layout({children}) {
-  return <LayoutWrapper>{children}</LayoutWrapper>;
+  return <ThemeProvider theme={theme}><LayoutWrapper>{children}</LayoutWrapper></ThemeProvider>;
 }

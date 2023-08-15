@@ -11,19 +11,19 @@ const IndexContainer = styled.main`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: ${768 + 16}px;
+  width: ${props => props.theme.mainWidth};
   height: 100vh;
-  padding: 8px;
-
-  border: 1px solid cyan;
+  padding: ${props => props.theme.spacing.xs};
+  //border: 1px solid cyan;
 `;
 
 const IndexPage = () => {
   return (<Layout>
     <IndexContainer>
       <MusicPlayer/>
-      <Expand expanded/>
-      <TrackList/>
+      <Expand onClick={() => console.log('clicked')}>
+        <TrackList/>
+      </Expand>
     </IndexContainer>
   </Layout>);
 };
