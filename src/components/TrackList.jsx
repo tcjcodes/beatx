@@ -5,8 +5,8 @@ import Track from './Track';
 import MainSection from './MainSection';
 
 const TrackListContainer = styled(MainSection)`
-  border: 1px solid grey;
-  width: 768px;
+  //border: 1px solid grey;
+  width: ${props => props.theme.mainWidth};
   padding: 8px 16px;
 `;
 

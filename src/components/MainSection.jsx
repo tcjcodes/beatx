@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const MainSection = styled.section`
-  width: 768px;
-  padding: 8px;
+  width: ${props => props.theme.mainWidth};
+  padding: ${props => props.theme.spacing.xs};
 `;
 
 export default MainSection;
