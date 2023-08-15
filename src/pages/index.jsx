@@ -21,7 +21,7 @@ const IndexPage = () => {
   return (<Layout>
     <IndexContainer>
       <MusicPlayer/>
-      <Expand onClick={() => console.log('clicked')}>
+      <Expand onClick={(expanded) => console.log('expanded? ' + expanded)}>
         <TrackList/>
       </Expand>
     </IndexContainer>

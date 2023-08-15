@@ -8,18 +8,23 @@ const ExpandContainer = styled(MainSection)`
   // align with Track border:
   margin-right: 2px;
 `;
-const ExpandBtn = styled.button.attrs({
+const ExpandBtn = styled.button.attrs(props => ({
   type: 'button',
-})`
-  background: black;
-  color: white;
+  ['aria-expanded']: props.$expanded ? 'true' : 'false',
+}))`
+  background: none;
+  color: ${props => props.theme.color};
   border: none;
-  font-size: 12px;
+  font-size: ${props => props.theme.bodyFont};
+  font-family: ${props => props.theme.fontFamily};
   cursor: pointer;
 `;
 
 const ExpandableContent = styled.div`
   visibility: ${props => props.$expanded ? 'visible' : 'hidden'};
+  opacity: ${props => props.$expanded ? 1 : 0};
+  animation: fadeIn 1s linear;
+  transition: opacity 0.5s linear;
 `;
 const Expand = ({onClick, children}) => {
   const [expanded, setExpanded] = useState(false);
