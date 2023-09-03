@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import ReactPlayer from 'react-player/soundcloud';
 import styled from 'styled-components';
+import IconButton from './IconButton';
 import RewindIcon from './icons/RewindIcon';
 import PlayIcon from './icons/PlayIcon';
 import FastForwardIcon from './icons/FastForwardIcon';
@@ -42,22 +43,30 @@ const SeekerWrapper = styled.div`
   width: 100%;
   padding: 0 24px;
 `;
-const MusicPlayer = () => (
-    <PlayerContainer>
-      <Title>beatx</Title>
+const MusicPlayer = () => {
+  const [playing, setPlaying] = useState(false);
+  return (
+      <PlayerContainer>
+        <Title>beatx</Title>
 
-      <Controls>
-        {/*/*<ReactPlayer url={SOUNDCLOUD_URL}/>*/}
-        <Icon style={{fontSize: '24px'}}><RewindIcon/></Icon>
-        <Icon>
-          <PlayIcon/>
-        </Icon>
-        <Icon style={{fontSize: '24px'}}><FastForwardIcon/></Icon>
-      </Controls>
+        <Controls>
+          {/*/*<ReactPlayer url={SOUNDCLOUD_URL}/>*/}
+          <IconButton
+              size="sm"
+              name="previous"
+              onClick={() => console.log('clicked')}><RewindIcon/></IconButton>
+          {!playing && <IconButton size="md" name="play"
+                                   onClick={() => setPlaying(
+                                       wasPlaying => !wasPlaying)}>
+            <PlayIcon/>
+          </IconButton>}
+          <IconButton size="sm" name="next"><FastForwardIcon/></IconButton>
+        </Controls>
 
-      <SeekerWrapper><Seeker/></SeekerWrapper>
-    </PlayerContainer>
-);
+        <SeekerWrapper><Seeker/></SeekerWrapper>
+      </PlayerContainer>
+  );
+};
 
 export default MusicPlayer;
 

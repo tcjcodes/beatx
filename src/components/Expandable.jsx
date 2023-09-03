@@ -12,7 +12,7 @@ const ExpandContainer = styled(MainSection)`
 
 const ExpandBtn = styled.button.attrs(props => ({
   type: 'button',
-  ['aria-expanded']: props.$expanded,
+  ['aria-expanded']: !!props.$expanded,
 }))`
   background: none;
   color: ${props => props.theme.color};
@@ -29,7 +29,7 @@ const ExpandableContent = styled.div`
   transition: opacity 0.5s linear;
 `;
 
-const Expand = ({onClick, children}) => {
+const Expandable = ({onClick, children}) => {
 
   const [expanded, setExpanded] = useState(false);
   const handleExpanded = () => {
@@ -45,8 +45,8 @@ const Expand = ({onClick, children}) => {
       ;
 };
 
-export default Expand;
+export default Expandable;
 
-Expand.propTypes = {
+Expandable.propTypes = {
   onClick: PropTypes.func,
 };

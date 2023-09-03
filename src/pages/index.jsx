@@ -1,5 +1,5 @@
 import React from 'react';
-import Expand from '../components/Expand';
+import Expandable from '../components/Expandable';
 import Layout from '../components/layout';
 import MusicPlayer from '../components/MusicPlayer';
 import TrackList from '../components/TrackList';
@@ -21,9 +21,9 @@ const IndexPage = () => {
   return (<Layout>
     <IndexContainer>
       <MusicPlayer/>
-      <Expand onClick={(expanded) => console.log('expanded? ' + expanded)}>
+      <Expandable onClick={(expanded) => console.log('expanded? ' + expanded)}>
         <TrackList/>
-      </Expand>
+      </Expandable>
     </IndexContainer>
   </Layout>);
 };
