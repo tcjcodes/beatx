@@ -15,11 +15,17 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-sitemap": "^6.11.0",
+    "gatsby-plugin-styled-components": "^6.11.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bulma-components": "^4.1.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-player": "^2.12.0",
+    "styled-components": "^6.0.5"
   }
 }
