@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 // import ReactPlayer from 'react-player/soundcloud';
 import styled from 'styled-components';
 import IconButton from './IconButton';
+import PauseIcon from './icons/PauseIcon';
 import RewindIcon from './icons/RewindIcon';
 import PlayIcon from './icons/PlayIcon';
 import FastForwardIcon from './icons/FastForwardIcon';
@@ -20,14 +21,15 @@ const PlayerContainer = styled(MainSection)`
   min-height: 160px;
   //border: 1px solid yellow;
 `;
-const Icon = styled.div`
+const Control = styled.div`
   font-size: 32px;
   padding: 0.75em;
   color: white;
 `;
-const Title = styled.p`
-  letter-spacing: 0.2em;
+const Title = styled.h3`
+  letter-spacing: 0.1em;
   margin-bottom: 16px;
+  font-weight: 700;
 `;
 
 const Controls = styled.div`
@@ -51,16 +53,19 @@ const MusicPlayer = () => {
 
         <Controls>
           {/*/*<ReactPlayer url={SOUNDCLOUD_URL}/>*/}
-          <IconButton
-              size="sm"
+          <Control><IconButton
               name="previous"
-              onClick={() => console.log('clicked')}><RewindIcon/></IconButton>
-          {!playing && <IconButton size="md" name="play"
-                                   onClick={() => setPlaying(
-                                       wasPlaying => !wasPlaying)}>
-            <PlayIcon/>
-          </IconButton>}
-          <IconButton size="sm" name="next"><FastForwardIcon/></IconButton>
+              onClick={() => console.log('clicked')}><RewindIcon
+              size="sm"/></IconButton></Control>
+          
+          <Control><IconButton size="md" name={playing ? 'Pause' : 'Play'}
+                               onClick={() => setPlaying(
+                                   wasPlaying => !wasPlaying)}>
+            {playing ? <PauseIcon size="md"/> : <PlayIcon size="md"/>}
+          </IconButton></Control>
+
+          <Control><IconButton name="next"><FastForwardIcon
+              size="sm"/></IconButton></Control>
         </Controls>
 
         <SeekerWrapper><Seeker/></SeekerWrapper>
