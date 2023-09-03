@@ -16,6 +16,7 @@ const BaseIcon = ({size, children}) => {
 
 export default BaseIcon;
 
+export const sizePropType = PropTypes.oneOf(['sm', 'md']);
 BaseIcon.propTypes = {
-  size: PropTypes.oneOf(['sm', 'md']),
+  size: sizePropType,
 };

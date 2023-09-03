@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from 'react-bulma-components';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -8,18 +8,20 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-const StyledIcon = styled(Icon)`
-  font-size: ${props => props.$size === 'sm' ? '24px' : '32px'}
-`;
-const IconButton = ({onClick, name, children, size}) => <StyledButton
+const IconButton = ({onClick, name, children}) => <StyledButton
     type="button"
     name={name}
     onClick={() => {
       console.log('clicked button');
-      onClick();
+      onClick && onClick();
     }}>
-  <StyledIcon $size={size}>{children}</StyledIcon></StyledButton>;
+  {children}
+</StyledButton>;
 
 export default IconButton;
 
-IconButton.propTypes = {};
+IconButton.propTypes = {
+  onClick: PropTypes.func,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};

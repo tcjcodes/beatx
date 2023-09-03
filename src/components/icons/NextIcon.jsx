@@ -1,15 +1,15 @@
 import React from 'react';
-import {BiPlay} from 'react-icons/bi';
+import {BiSkipNext} from 'react-icons/bi';
 import BaseIcon, {sizePropType} from './BaseIcon';
 
-const RewindIcon = ({size}) => (
+const NextIcon = ({size}) => (
     <BaseIcon size={size}>
-      <BiPlay/>
+      <BiSkipNext/>
     </BaseIcon>
 );
 
-export default RewindIcon;
+export default NextIcon;
 
-RewindIcon.propTypes = {
+NextIcon.propTypes = {
   size: sizePropType,
 };

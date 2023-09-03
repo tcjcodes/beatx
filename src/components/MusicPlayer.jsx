@@ -3,9 +3,9 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import IconButton from './IconButton';
 import PauseIcon from './icons/PauseIcon';
-import RewindIcon from './icons/RewindIcon';
+import PreviousIcon from './icons/PreviousIcon';
 import PlayIcon from './icons/PlayIcon';
-import FastForwardIcon from './icons/FastForwardIcon';
+import NextIcon from './icons/NextIcon';
 import Seeker from './Seeker';
 import MainSection from './MainSection';
 // const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
@@ -27,7 +27,7 @@ const Control = styled.div`
   color: white;
 `;
 const Title = styled.h3`
-  letter-spacing: 0.1em;
+  //letter-spacing: 0.1em;
   margin-bottom: 16px;
   font-weight: 700;
 `;
@@ -49,22 +49,25 @@ const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
   return (
       <PlayerContainer>
-        <Title>beatx</Title>
+        <Title>average sized beats</Title>
 
         <Controls>
           {/*/*<ReactPlayer url={SOUNDCLOUD_URL}/>*/}
-          <Control><IconButton
-              name="previous"
-              onClick={() => console.log('clicked')}><RewindIcon
-              size="sm"/></IconButton></Control>
-          
-          <Control><IconButton size="md" name={playing ? 'Pause' : 'Play'}
-                               onClick={() => setPlaying(
-                                   wasPlaying => !wasPlaying)}>
-            {playing ? <PauseIcon size="md"/> : <PlayIcon size="md"/>}
-          </IconButton></Control>
+          <Control>
+            <IconButton
+                name="previous"
+                onClick={() => console.log('clicked')}><PreviousIcon size="sm"/></IconButton>
+          </Control>
 
-          <Control><IconButton name="next"><FastForwardIcon
+          <Control>
+            <IconButton name={playing ? 'Pause' : 'Play'}
+                        onClick={() => setPlaying(
+                            wasPlaying => !wasPlaying)}>
+              {playing ? <PauseIcon size="md"/> : <PlayIcon size="md"/>}
+            </IconButton>
+          </Control>
+
+          <Control><IconButton name="next"><NextIcon
               size="sm"/></IconButton></Control>
         </Controls>
 
