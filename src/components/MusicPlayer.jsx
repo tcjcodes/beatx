@@ -61,11 +61,15 @@ const MusicPlayer = () => {
   });
   const {duration, playing, played} = playerState;
 
-  const handleSeek = (percentValue) => {
-    console.log('seeked to', percentValue);
-    const newDuration = parseFloat(percentValue);
-    setPlayerState(state => ({...state, duration: newDuration}));
-    playerRef.current.seekTo(newDuration / 100, 'fraction');
+  const handleSetSeeking = (seekingVal) => {
+    setPlayerState(state => ({...state, seeking: seekingVal}));
+  };
+
+  const handleSeek = (seekToValue) => {
+    console.log('seeked to', seekToValue);
+    const newPlayed = parseFloat(seekToValue);
+    setPlayerState(state => ({...state, played: newPlayed}));
+    playerRef.current.seekTo(newPlayed, 'fraction');
   };
   const handlePrevClick = () => {
   };
@@ -111,7 +115,8 @@ const MusicPlayer = () => {
         <SeekerWrapper><Seeker
             played={played}
             duration={duration}
-            onChange={handleSeek}/></SeekerWrapper>
+            onChange={handleSeek}
+            setSeeking={handleSetSeeking}/></SeekerWrapper>
       </PlayerContainer>
   );
 };

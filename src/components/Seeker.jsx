@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
 import Duration from './Duration';
 
+const SEEKER_MAX = 0.999999;
 /**
  * Slider CSS adapted from:
  * @source https://codepen.io/RajanLad/pen/MWaEyNp
@@ -34,7 +35,8 @@ const thumbCss = css`
 const SliderInput = styled.input.attrs(() => ({
   type: 'range',
   min: 0,
-  max: 100,
+  max: SEEKER_MAX,
+  step: 'any',
 }))`
   position: absolute;
   top: -2px;
@@ -103,11 +105,28 @@ const TimestampContainer = styled.div`
   font-size: 0.85em;
 `;
 
-const Seeker = ({duration, played, onChange}) => {
+const Seeker = ({duration, played, onChange, setSeeking}) => {
+  console.log('duration', duration);
   const [value, setValue] = useState(0);
+
+  const handleMouseDown = (e) => {
+    // this.setState({ seeking: true })
+    setSeeking(true);
+  };
+
+  const handleMouseUp = (e) => {
+    // this.setState({ seeking: false })
+    // this.player.seekTo(parseFloat(e.target.value))
+    setSeeking(false);
+
+    const value = parseFloat(e.target.value);
+    onChange && onChange(value);
+  };
   const handleChange = (e) => {
     setValue(e.target.value);
-    onChange && onChange(e.target.value);
+
+    const value = parseFloat(e.target.value);
+    onChange && onChange(value);
   };
 
   const elapsedSecs = duration * played;
@@ -117,6 +136,8 @@ const Seeker = ({duration, played, onChange}) => {
     <SliderContainer>
       <SliderInput
           onChange={handleChange}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
           value={value}/>
       <CompletionBar value={value}/>
     </SliderContainer>
