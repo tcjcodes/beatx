@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import ReactPlayer from 'react-player/soundcloud';
+import ReactPlayer from 'react-player/soundcloud';
 import styled from 'styled-components';
 import IconButton from './IconButton';
 import PauseIcon from './icons/PauseIcon';
@@ -8,7 +8,8 @@ import PlayIcon from './icons/PlayIcon';
 import NextIcon from './icons/NextIcon';
 import Seeker from './Seeker';
 import MainSection from './MainSection';
-// const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
+
+const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
 
 const PlayerContainer = styled(MainSection)`
   margin-top: 70%;
@@ -19,7 +20,6 @@ const PlayerContainer = styled(MainSection)`
   justify-content: space-between;
   align-items: center;
   min-height: 160px;
-  //border: 1px solid yellow;
 `;
 const Control = styled.div`
   font-size: 32px;
@@ -45,29 +45,57 @@ const SeekerWrapper = styled.div`
   width: 100%;
   padding: 0 24px;
 `;
+
+const PlayerWrapper = styled.div`
+`;
 const MusicPlayer = () => {
-  const [playing, setPlaying] = useState(false);
+  const [playerState, setPlayerState] = useState({
+    playing: false,
+    // muted: false,
+    volume: 0.5,
+    played: 0,
+    seeking: false,
+    Buffer: true,
+  });
+  const {playing} = playerState;
+
+  const previousHandler = () => {
+  };
+  const nextHandler = () => {
+  };
+  const playPauseHandler = () => {
+    setPlayerState(state => ({...state, playing: !state.playing}));
+  };
+
   return (
       <PlayerContainer>
         <Title>average sized beats</Title>
 
+        <PlayerWrapper>
+          <ReactPlayer
+              url={SOUNDCLOUD_URL}
+              width="100%"
+              height="100%"
+              playing={playing}
+          />
+        </PlayerWrapper>
+
         <Controls>
-          {/*/*<ReactPlayer url={SOUNDCLOUD_URL}/>*/}
           <Control>
             <IconButton
                 name="previous"
-                onClick={() => console.log('clicked')}><PreviousIcon size="sm"/></IconButton>
+                onClick={previousHandler}><PreviousIcon
+                size="sm"/></IconButton>
           </Control>
 
           <Control>
             <IconButton name={playing ? 'Pause' : 'Play'}
-                        onClick={() => setPlaying(
-                            wasPlaying => !wasPlaying)}>
+                        onClick={playPauseHandler}>
               {playing ? <PauseIcon size="md"/> : <PlayIcon size="md"/>}
             </IconButton>
           </Control>
 
-          <Control><IconButton name="next"><NextIcon
+          <Control><IconButton name="next" onClick={nextHandler}><NextIcon
               size="sm"/></IconButton></Control>
         </Controls>
 
