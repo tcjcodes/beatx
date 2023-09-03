@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import ReactPlayer from 'react-player/soundcloud';
 import styled from 'styled-components';
 import IconButton from './IconButton';
@@ -49,21 +49,29 @@ const SeekerWrapper = styled.div`
 const PlayerWrapper = styled.div`
 `;
 const MusicPlayer = () => {
+  const playerRef = useRef(null);
   const [playerState, setPlayerState] = useState({
     playing: false,
     // muted: false,
     volume: 0.5,
     played: 0,
+    duration: 0,
     seeking: false,
     Buffer: true,
   });
-  const {playing} = playerState;
+  const {duration, playing, played} = playerState;
 
-  const previousHandler = () => {
+  const handleSeek = (percentValue) => {
+    console.log('seeked to', percentValue);
+    const newDuration = parseFloat(percentValue);
+    setPlayerState(state => ({...state, duration: newDuration}));
+    playerRef.current.seekTo(newDuration / 100, 'fraction');
   };
-  const nextHandler = () => {
+  const handlePrevClick = () => {
   };
-  const playPauseHandler = () => {
+  const handleNextClick = () => {
+  };
+  const handlePlayPauseClick = () => {
     setPlayerState(state => ({...state, playing: !state.playing}));
   };
 
@@ -73,6 +81,7 @@ const MusicPlayer = () => {
 
         <PlayerWrapper>
           <ReactPlayer
+              ref={playerRef}
               url={SOUNDCLOUD_URL}
               width="100%"
               height="100%"
@@ -84,22 +93,25 @@ const MusicPlayer = () => {
           <Control>
             <IconButton
                 name="previous"
-                onClick={previousHandler}><PreviousIcon
+                onClick={handlePrevClick}><PreviousIcon
                 size="sm"/></IconButton>
           </Control>
 
           <Control>
             <IconButton name={playing ? 'Pause' : 'Play'}
-                        onClick={playPauseHandler}>
+                        onClick={handlePlayPauseClick}>
               {playing ? <PauseIcon size="md"/> : <PlayIcon size="md"/>}
             </IconButton>
           </Control>
 
-          <Control><IconButton name="next" onClick={nextHandler}><NextIcon
+          <Control><IconButton name="next" onClick={handleNextClick}><NextIcon
               size="sm"/></IconButton></Control>
         </Controls>
 
-        <SeekerWrapper><Seeker/></SeekerWrapper>
+        <SeekerWrapper><Seeker
+            played={played}
+            duration={duration}
+            onChange={handleSeek}/></SeekerWrapper>
       </PlayerContainer>
   );
 };

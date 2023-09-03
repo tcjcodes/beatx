@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
+import Duration from './Duration';
 
 /**
  * Slider CSS adapted from:
@@ -46,6 +48,10 @@ const SliderInput = styled.input.attrs(() => ({
   -webkit-transition: .2s;
   transition: opacity .2s;
 
+  &:focus, &:hover, &:active {
+    box-shadow: inherit;
+  }
+
   &::-webkit-slider-thumb {
     box-shadow: none;
     border: none;
@@ -66,6 +72,7 @@ const SliderInput = styled.input.attrs(() => ({
     border-radius: 0;
     background: #ffffff;
     cursor: pointer;
+
   }
 
   &::-ms-thumb {
@@ -96,23 +103,36 @@ const TimestampContainer = styled.div`
   font-size: 0.85em;
 `;
 
-const Seeker = () => {
+const Seeker = ({duration, played, onChange}) => {
   const [value, setValue] = useState(0);
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    onChange && onChange(e.target.value);
+  };
+
+  const elapsedSecs = duration * played;
+  const remainingSecs = duration * (1 - played);
 
   return (<SeekerContainer>
     <SliderContainer>
       <SliderInput
-          onChange={(e) => setValue(e.target.value)}
+          onChange={handleChange}
           value={value}/>
       <CompletionBar value={value}/>
     </SliderContainer>
     <TimestampContainer>
-      <span>01:26</span>
-      <span>02:18</span>
+      <span><Duration
+          seconds={elapsedSecs}/></span>
+      <span><Duration
+          seconds={remainingSecs}/></span>
     </TimestampContainer>
   </SeekerContainer>);
 };
 
 export default Seeker;
 
-Seeker.propTypes = {};
+Seeker.propTypes = {
+  duration: PropTypes.number,
+  played: PropTypes.number,
+  onChange: PropTypes.func,
+};
