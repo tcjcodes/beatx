@@ -9,6 +9,7 @@ import MainSection from './MainSection';
 // const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
 
 const PlayerContainer = styled(MainSection)`
+  margin-top: 70%;
   margin-bottom: ${8 * 12}px;
   text-align: center;
   display: flex;

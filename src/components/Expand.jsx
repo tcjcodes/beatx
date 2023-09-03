@@ -7,10 +7,12 @@ const ExpandContainer = styled(MainSection)`
   text-align: right;
   // align with Track border:
   margin-right: 2px;
+  //border: 1px solid orange;
 `;
+
 const ExpandBtn = styled.button.attrs(props => ({
   type: 'button',
-  ['aria-expanded']: props.$expanded ? 'true' : 'false',
+  ['aria-expanded']: props.$expanded,
 }))`
   background: none;
   color: ${props => props.theme.color};
@@ -26,7 +28,9 @@ const ExpandableContent = styled.div`
   animation: fadeIn 1s linear;
   transition: opacity 0.5s linear;
 `;
+
 const Expand = ({onClick, children}) => {
+
   const [expanded, setExpanded] = useState(false);
   const handleExpanded = () => {
     setExpanded(curExpanded => !curExpanded);
