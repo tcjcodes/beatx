@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled, {css} from 'styled-components';
 import Duration from './Duration';
 
@@ -106,38 +106,30 @@ const TimestampContainer = styled.div`
 `;
 
 const Seeker = ({duration, played, onChange, onMouseDown, onMouseUp}) => {
-  console.log('duration', duration, 'played', played);
-  const [value, setValue] = useState(0);
-
-  const handleMouseDown = (e) => {
-    const value = parseFloat(e.target.value);
-    onMouseDown && onMouseDown(value);
-  };
-
   const handleChange = (e) => {
     const value = parseFloat(e.target.value);
     console.log('changing seeker value', value);
-    setValue(e.target.value);
+    // setValue(e.target.value);
     onChange && onChange(value);
   };
 
   const handleMouseUp = (e) => {
     const value = parseFloat(e.target.value);
-
     onMouseUp && onMouseUp(value);
   };
 
   const elapsedSecs = duration * played;
   const remainingSecs = duration * (1 - played);
+  console.log('duration', duration, 'played', played);
 
   return (<SeekerContainer>
     <SliderContainer>
       <SliderInput
           onChange={handleChange}
-          onMouseDown={handleMouseDown}
+          onMouseDown={onMouseDown}
           onMouseUp={handleMouseUp}
-          value={value}/>
-      <CompletionBar value={value}/>
+          value={played}/>
+      <CompletionBar value={played}/>
     </SliderContainer>
     <TimestampContainer>
       <Duration

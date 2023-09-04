@@ -56,22 +56,22 @@ const MusicPlayer = () => {
     played: 0,
     duration: 0,
     seeking: false,
-    buffer: true,
+    // buffer: true,
   });
   const {duration, playing, played} = playerState;
 
   // Seeker handlers
   const handleSeekMouseDown = () => {
-    setPlayerState({seeking: true});
+    setPlayerState(state => ({...state, seeking: true}));
   };
 
   const handleSeekChange = (value) => {
-    console.log('seeked to', value);
-    setPlayerState({played: value});
+    console.debug('change played to', value);
+    setPlayerState(state => ({...state, played: value}));
   };
 
   const handleSeekMouseUp = (value) => {
-    setPlayerState({seeking: false});
+    setPlayerState(state => ({...state, seeking: false}));
     playerRef.current.seekTo(value);
   };
 
@@ -81,13 +81,13 @@ const MusicPlayer = () => {
   const handleNextClick = () => { // TODO
   };
   const handlePlayPauseClick = () => {
-    setPlayerState(state => ({playing: !state.playing}));
+    setPlayerState(state => ({...state, playing: !state.playing}));
   };
 
   // react-player handlers
-  const handlePlayerDuration = newDuration => {
-    console.log('onDuration', newDuration);
-    setPlayerState({duration: newDuration});
+  const handlePlayerDuration = (newDuration) => {
+    // console.log('onDuration', newDuration);
+    setPlayerState(state => ({...state, duration: newDuration}));
   };
 
   return (
