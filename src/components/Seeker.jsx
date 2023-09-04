@@ -3,7 +3,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import Duration from './Duration';
 
-const SEEKER_MAX = 0.999999;
+const SEEKER_MAX = 1;
 /**
  * Slider CSS adapted from:
  * @source https://codepen.io/RajanLad/pen/MWaEyNp
@@ -74,7 +74,6 @@ const SliderInput = styled.input.attrs(() => ({
     border-radius: 0;
     background: #ffffff;
     cursor: pointer;
-
   }
 
   &::-ms-thumb {
@@ -91,7 +90,7 @@ const SliderInput = styled.input.attrs(() => ({
 const CompletionBar = styled.div`
   position: relative;
   top: 0;
-  width: ${props => `${props.value}%`};
+  width: ${props => `${props.percent}%`};
 
   height: ${SLIDER_HEIGHT_PX}px;
   background-color: rgba(255, 255, 255, 1.0);
@@ -106,21 +105,19 @@ const TimestampContainer = styled.div`
 `;
 
 const Seeker = ({duration, played, onChange, onMouseDown, onMouseUp}) => {
+  const elapsedSecs = duration * played;
+  const remainingSecs = duration * (1 - played);
+  const percentPlayed = Math.ceil(played * 100);
+  console.info('duration', duration, 'elapsed', elapsedSecs, 'remaining',
+      remainingSecs, 'played', played, 'percent', percentPlayed);
+
   const handleChange = (e) => {
-    const value = parseFloat(e.target.value);
-    console.log('changing seeker value', value);
-    // setValue(e.target.value);
-    onChange && onChange(value);
+    onChange && onChange(parseFloat(e.target.value));
   };
 
   const handleMouseUp = (e) => {
-    const value = parseFloat(e.target.value);
-    onMouseUp && onMouseUp(value);
+    onMouseUp && onMouseUp(parseFloat(e.target.value));
   };
-
-  const elapsedSecs = duration * played;
-  const remainingSecs = duration * (1 - played);
-  console.log('duration', duration, 'played', played);
 
   return (<SeekerContainer>
     <SliderContainer>
@@ -129,7 +126,7 @@ const Seeker = ({duration, played, onChange, onMouseDown, onMouseUp}) => {
           onMouseDown={onMouseDown}
           onMouseUp={handleMouseUp}
           value={played}/>
-      <CompletionBar value={played}/>
+      <CompletionBar percent={percentPlayed}/>
     </SliderContainer>
     <TimestampContainer>
       <Duration
