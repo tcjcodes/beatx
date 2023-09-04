@@ -105,28 +105,26 @@ const TimestampContainer = styled.div`
   font-size: 0.85em;
 `;
 
-const Seeker = ({duration, played, onChange, setSeeking}) => {
-  console.log('duration', duration);
+const Seeker = ({duration, played, onChange, onMouseDown, onMouseUp}) => {
+  console.log('duration', duration, 'played', played);
   const [value, setValue] = useState(0);
 
   const handleMouseDown = (e) => {
-    // this.setState({ seeking: true })
-    setSeeking(true);
+    const value = parseFloat(e.target.value);
+    onMouseDown && onMouseDown(value);
+  };
+
+  const handleChange = (e) => {
+    const value = parseFloat(e.target.value);
+    console.log('changing seeker value', value);
+    setValue(e.target.value);
+    onChange && onChange(value);
   };
 
   const handleMouseUp = (e) => {
-    // this.setState({ seeking: false })
-    // this.player.seekTo(parseFloat(e.target.value))
-    setSeeking(false);
-
     const value = parseFloat(e.target.value);
-    onChange && onChange(value);
-  };
-  const handleChange = (e) => {
-    setValue(e.target.value);
 
-    const value = parseFloat(e.target.value);
-    onChange && onChange(value);
+    onMouseUp && onMouseUp(value);
   };
 
   const elapsedSecs = duration * played;
@@ -142,10 +140,12 @@ const Seeker = ({duration, played, onChange, setSeeking}) => {
       <CompletionBar value={value}/>
     </SliderContainer>
     <TimestampContainer>
-      <span><Duration
-          seconds={elapsedSecs}/></span>
-      <span><Duration
-          seconds={remainingSecs}/></span>
+      <Duration
+          data-testid="playTimeElapsed"
+          seconds={elapsedSecs}/>
+      <Duration
+          data-testid="playTimeRemaining"
+          seconds={remainingSecs}/>
     </TimestampContainer>
   </SeekerContainer>);
 };
@@ -153,7 +153,9 @@ const Seeker = ({duration, played, onChange, setSeeking}) => {
 export default Seeker;
 
 Seeker.propTypes = {
-  duration: PropTypes.number,
-  played: PropTypes.number,
+  duration: PropTypes.number.isRequired,
+  played: PropTypes.number.isRequired,
   onChange: PropTypes.func,
+  onMouseUp: PropTypes.func,
+  onMouseDown: PropTypes.func,
 };

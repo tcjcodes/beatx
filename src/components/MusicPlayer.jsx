@@ -52,31 +52,42 @@ const MusicPlayer = () => {
   const playerRef = useRef(null);
   const [playerState, setPlayerState] = useState({
     playing: false,
-    // muted: false,
     volume: 0.5,
     played: 0,
     duration: 0,
     seeking: false,
-    Buffer: true,
+    buffer: true,
   });
   const {duration, playing, played} = playerState;
 
-  const handleSetSeeking = (seekingVal) => {
-    setPlayerState(state => ({...state, seeking: seekingVal}));
+  // Seeker handlers
+  const handleSeekMouseDown = () => {
+    setPlayerState({seeking: true});
   };
 
-  const handleSeek = (seekToValue) => {
-    console.log('seeked to', seekToValue);
-    const newPlayed = parseFloat(seekToValue);
-    setPlayerState(state => ({...state, played: newPlayed}));
-    playerRef.current.seekTo(newPlayed, 'fraction');
+  const handleSeekChange = (value) => {
+    console.log('seeked to', value);
+    setPlayerState({played: value});
   };
-  const handlePrevClick = () => {
+
+  const handleSeekMouseUp = (value) => {
+    setPlayerState({seeking: false});
+    playerRef.current.seekTo(value);
   };
-  const handleNextClick = () => {
+
+  // custom player handlers
+  const handlePrevClick = () => { // TODO
+  };
+  const handleNextClick = () => { // TODO
   };
   const handlePlayPauseClick = () => {
-    setPlayerState(state => ({...state, playing: !state.playing}));
+    setPlayerState(state => ({playing: !state.playing}));
+  };
+
+  // react-player handlers
+  const handlePlayerDuration = newDuration => {
+    console.log('onDuration', newDuration);
+    setPlayerState({duration: newDuration});
   };
 
   return (
@@ -90,6 +101,7 @@ const MusicPlayer = () => {
               width="100%"
               height="100%"
               playing={playing}
+              onDuration={handlePlayerDuration}
           />
         </PlayerWrapper>
 
@@ -115,8 +127,9 @@ const MusicPlayer = () => {
         <SeekerWrapper><Seeker
             played={played}
             duration={duration}
-            onChange={handleSeek}
-            setSeeking={handleSetSeeking}/></SeekerWrapper>
+            onChange={handleSeekChange}
+            onMouseUp={handleSeekMouseUp}
+            onMouseDown={handleSeekMouseDown}/></SeekerWrapper>
       </PlayerContainer>
   );
 };
