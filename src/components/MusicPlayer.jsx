@@ -66,7 +66,6 @@ const MusicPlayer = () => {
   };
 
   const handleSeekChange = (value) => {
-    console.debug('change played to', value);
     setPlayerState(state => ({...state, played: value}));
   };
 
@@ -86,7 +85,6 @@ const MusicPlayer = () => {
 
   // react-player handlers
   const handlePlayerDuration = (newDuration) => {
-    // console.log('onDuration', newDuration);
     setPlayerState(state => ({...state, duration: newDuration}));
   };
 

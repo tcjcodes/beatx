@@ -25,13 +25,13 @@ const thumbCss = css`
   box-shadow: none;
   border: none;
   height: 16px;
-  width: 8px;
+  width: 4px;
   border-radius: 0;
   background: #ffffff;
   cursor: pointer;
   margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 `;
+
 const SliderInput = styled.input.attrs(() => ({
   type: 'range',
   min: 0,
@@ -55,35 +55,15 @@ const SliderInput = styled.input.attrs(() => ({
   }
 
   &::-webkit-slider-thumb {
-    box-shadow: none;
-    border: none;
-    height: 16px;
-    width: 8px;
-    border-radius: 0;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+    ${thumbCss}
   }
 
   &::-moz-range-thumb {
-    box-shadow: none;
-    border: none;
-    height: 16px;
-    width: 8px;
-    border-radius: 0;
-    background: #ffffff;
-    cursor: pointer;
+    ${thumbCss}
   }
 
   &::-ms-thumb {
-    box-shadow: none;
-    border: none;
-    height: 16px;
-    width: 8px;
-    border-radius: 0;
-    background: #ffffff;
-    cursor: pointer;
+    ${thumbCss}
   }
 `;
 
@@ -108,8 +88,6 @@ const Seeker = ({duration, played, onChange, onMouseDown, onMouseUp}) => {
   const elapsedSecs = duration * played;
   const remainingSecs = duration * (1 - played);
   const percentPlayed = Math.ceil(played * 100);
-  console.info('duration', duration, 'elapsed', elapsedSecs, 'remaining',
-      remainingSecs, 'played', played, 'percent', percentPlayed);
 
   const handleChange = (e) => {
     onChange && onChange(parseFloat(e.target.value));
