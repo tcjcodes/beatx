@@ -48,14 +48,14 @@ const SeekerWrapper = styled.div`
 
 const PlayerWrapper = styled.div`
 `;
-const MusicPlayer = ({url}) => {
+const MusicPlayer = () => {
   console.debug('render MusicPlayer');
   const {
     musicState,
     setTracks,
     setCurrentTrackIndex,
   } = useContext(MusicContext);
-  const {currentTrack} = musicState;
+  const {currentTrack, url} = musicState;
 
   const playerRef = useRef();
   const [playerState, setPlayerState] = useState({
@@ -86,26 +86,24 @@ const MusicPlayer = ({url}) => {
   const handlePrevClick = () => {
     const internalPlayer = playerRef.current.getInternalPlayer();
     internalPlayer.prev();
-    internalPlayer.getCurrentSoundIndex(index => {
-      setCurrentTrackIndex(index);
-    });
   };
 
   const handleNextClick = () => {
     const internalPlayer = playerRef.current.getInternalPlayer();
     internalPlayer.next();
-    internalPlayer.getCurrentSoundIndex(index => {
-      setCurrentTrackIndex(index);
-    });
 
-    internalPlayer.getCurrentSound(val => {
-      // TODO update current track with current sound object?
-      console.info('current sound', val);
-    });
+    // internalPlayer.getCurrentSound(val => {
+    // TODO update current track with current sound object?
+    // console.info('current sound', val);
+    // });
   };
 
   const handlePlayerPlay = () => {
     setPlayerState(state => ({...state, playing: true}));
+    const internalPlayer = playerRef.current.getInternalPlayer();
+    internalPlayer.getCurrentSoundIndex(index => {
+      setCurrentTrackIndex(index);
+    });
   };
   const handlePlayerPause = () => {
     setPlayerState(state => ({...state, playing: false}));
@@ -129,7 +127,7 @@ const MusicPlayer = ({url}) => {
 
   // TODO ?
   const handlePlayerProgress = (newProgress) => {
-    console.log('onProgress', newProgress);
+    // console.log('onProgress', newProgress);
     // We only want to update time slider if we are not currently seeking
     // if (!playerState.seeking) {
     //   setPlayerState(prevState => ({...prevState, progress: newProgress}));
@@ -212,6 +210,4 @@ const MusicPlayer = ({url}) => {
 
 export default MusicPlayer;
 
-MusicPlayer.propTypes = {
-  url: PropTypes.string.isRequired,
-};
+MusicPlayer.propTypes = {};
