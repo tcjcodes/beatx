@@ -84,13 +84,37 @@ const MusicPlayer = ({url}) => {
     internalPlayer.next();
   };
 
+  const handlePlayerPlay = () => {
+    setPlayerState(state => ({...state, playing: true}));
+  };
+  const handlePlayerPause = () => {
+    setPlayerState(state => ({...state, playing: false}));
+  };
   const handlePlayPauseClick = () => {
     setPlayerState(state => ({...state, playing: !state.playing}));
   };
 
   // react-player handlers
+  const handlePlayerReady = () => {
+    console.info('player ready');
+    let internalPlayer = playerRef.current.getInternalPlayer();
+    internalPlayer.getSounds((val) => {
+      console.info('getSounds callback', val);
+    });
+    internalPlayer.getCurrentSound(val => {
+      console.info('current sound callback', val);
+    });
+    internalPlayer.getCurrentSoundIndex(val => {
+      console.info('current sound index', val);
+    });
+  };
+
   const handlePlayerDuration = (newDuration) => {
     setPlayerState(state => ({...state, duration: newDuration}));
+  };
+
+  const handlePlayerError = (err) => {
+    console.error('react-player error', err);
   };
 
   return (
@@ -104,7 +128,11 @@ const MusicPlayer = ({url}) => {
               width="100%"
               height="100%"
               playing={playing}
+              onPlay={handlePlayerPlay}
+              onPause={handlePlayerPause}
+              onReady={handlePlayerReady}
               onDuration={handlePlayerDuration}
+              onError={handlePlayerError}
           />
         </PlayerWrapper>
 
