@@ -1,9 +1,8 @@
 import React from 'react';
-import Expandable from '../components/Expandable';
-import Layout from '../components/layout';
-import MusicPlayer from '../components/MusicPlayer';
-import TrackList from '../components/TrackList';
 import styled from 'styled-components';
+import HomePageContent from '../components/HomePageContent';
+import Layout from '../components/layout';
+import {MusicContextProvider} from '../components/MusicContext';
 
 const IndexContainer = styled.main`
   display: flex;
@@ -18,13 +17,11 @@ const IndexContainer = styled.main`
 
 const IndexPage = () => {
   return (<Layout>
-    <IndexContainer>
-      <MusicPlayer
-          url="https://soundcloud.com/polo-g/sets/polo-g?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"/>
-      <Expandable onClick={(expanded) => console.log('expanded? ' + expanded)}>
-        <TrackList/>
-      </Expandable>
-    </IndexContainer>
+    <MusicContextProvider>
+      <IndexContainer>
+        <HomePageContent/>
+      </IndexContainer>
+    </MusicContextProvider>
   </Layout>);
 };
 

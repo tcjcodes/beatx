@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useContext, useRef, useState} from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player/soundcloud';
 import styled from 'styled-components';
@@ -7,6 +7,7 @@ import PauseIcon from './icons/PauseIcon';
 import PreviousIcon from './icons/PreviousIcon';
 import PlayIcon from './icons/PlayIcon';
 import NextIcon from './icons/NextIcon';
+import {MusicContext} from './MusicContext';
 import Seeker from './Seeker';
 import MainSection from './MainSection';
 
@@ -48,6 +49,9 @@ const SeekerWrapper = styled.div`
 const PlayerWrapper = styled.div`
 `;
 const MusicPlayer = ({url}) => {
+  console.debug('render MusicPlayer');
+  const {setTracks, setCurrentTrackIndex} = useContext(MusicContext);
+
   const playerRef = useRef();
   const [playerState, setPlayerState] = useState({
     playing: false,
@@ -96,16 +100,14 @@ const MusicPlayer = ({url}) => {
 
   // react-player handlers
   const handlePlayerReady = () => {
-    console.info('player ready');
-    let internalPlayer = playerRef.current.getInternalPlayer();
-    internalPlayer.getSounds((val) => {
-      console.info('getSounds callback', val);
+    console.debug('player ready');
+
+    const internalPlayer = playerRef.current.getInternalPlayer();
+    internalPlayer.getSounds((soundList) => {
+      setTracks(soundList);
     });
-    internalPlayer.getCurrentSound(val => {
-      console.info('current sound callback', val);
-    });
-    internalPlayer.getCurrentSoundIndex(val => {
-      console.info('current sound index', val);
+    internalPlayer.getCurrentSoundIndex(index => {
+      setCurrentTrackIndex(index);
     });
   };
 
