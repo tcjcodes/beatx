@@ -8,16 +8,17 @@ const TrackContainer = styled.div`
   padding: 16px 24px;
   border: ${props => props.$active ? '2px solid #fff' : 'none'};
 `;
-const Track = ({title, date}) => (
-    <TrackContainer $active={date === '12/1/2023'}>
+const Track = ({active, title, date}) => (
+    <TrackContainer $active={active}>
       <span>{title}</span>
-      <span>{new Date(date).toLocaleDateString()}</span>
+      <span>{date ? date.toLocaleDateString() : ''}</span>
     </TrackContainer>
 );
 
 export default Track;
 
 Track.propTypes = {
+  active: PropTypes.bool,
   title: PropTypes.string.isRequired,
-  date: PropTypes.string,
+  date: PropTypes.instanceOf(Date),
 };

@@ -19,7 +19,7 @@ const PlayerContainer = styled(MainSection)`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 160px;
+  //min-height: 160px;
 `;
 const Control = styled.div`
   font-size: 32px;
@@ -50,7 +50,12 @@ const PlayerWrapper = styled.div`
 `;
 const MusicPlayer = ({url}) => {
   console.debug('render MusicPlayer');
-  const {setTracks, setCurrentTrackIndex} = useContext(MusicContext);
+  const {
+    musicState,
+    setTracks,
+    setCurrentTrackIndex,
+  } = useContext(MusicContext);
+  const {currentTrack} = musicState;
 
   const playerRef = useRef();
   const [playerState, setPlayerState] = useState({
@@ -123,6 +128,7 @@ const MusicPlayer = ({url}) => {
       <PlayerContainer>
         <Title>average sized beats</Title>
 
+        <p>{currentTrack && currentTrack.title}</p>
         <PlayerWrapper>
           <ReactPlayer
               ref={playerRef}

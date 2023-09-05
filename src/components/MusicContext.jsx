@@ -11,15 +11,13 @@ export const MusicContextProvider = ({children}) => {
   });
 
   const setTracks = (tracks) => {
-    console.info('setTracks', tracks);
     setState(prevState => ({...prevState, tracks}));
   };
   const setCurrentTrackIndex = (currentTrackIndex) => {
-    console.info('setCurrentTrackIndex', currentTrackIndex);
     setState(prevState => ({
       ...prevState,
       currentTrackIndex,
-      currentTrack: prevState.tracks ?? prevState.tracks[currentTrackIndex],
+      currentTrack: prevState.tracks[currentTrackIndex],
     }));
   };
 
