@@ -1,4 +1,5 @@
 import React, {useRef, useState} from 'react';
+import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player/soundcloud';
 import styled from 'styled-components';
 import IconButton from './IconButton';
@@ -8,8 +9,6 @@ import PlayIcon from './icons/PlayIcon';
 import NextIcon from './icons/NextIcon';
 import Seeker from './Seeker';
 import MainSection from './MainSection';
-
-const SOUNDCLOUD_URL = ['https://soundcloud.com/gunna/sets/wunna?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'];
 
 const PlayerContainer = styled(MainSection)`
   margin-top: 70%;
@@ -48,8 +47,8 @@ const SeekerWrapper = styled.div`
 
 const PlayerWrapper = styled.div`
 `;
-const MusicPlayer = () => {
-  const playerRef = useRef(null);
+const MusicPlayer = ({url}) => {
+  const playerRef = useRef();
   const [playerState, setPlayerState] = useState({
     playing: false,
     volume: 0.5,
@@ -75,10 +74,16 @@ const MusicPlayer = () => {
   };
 
   // custom player handlers
-  const handlePrevClick = () => { // TODO
+  const handlePrevClick = () => {
+    const internalPlayer = playerRef.current.getInternalPlayer();
+    internalPlayer.prev();
   };
-  const handleNextClick = () => { // TODO
+
+  const handleNextClick = () => {
+    const internalPlayer = playerRef.current.getInternalPlayer();
+    internalPlayer.next();
   };
+
   const handlePlayPauseClick = () => {
     setPlayerState(state => ({...state, playing: !state.playing}));
   };
@@ -95,7 +100,7 @@ const MusicPlayer = () => {
         <PlayerWrapper>
           <ReactPlayer
               ref={playerRef}
-              url={SOUNDCLOUD_URL}
+              url={url}
               width="100%"
               height="100%"
               playing={playing}
@@ -118,8 +123,10 @@ const MusicPlayer = () => {
             </IconButton>
           </Control>
 
-          <Control><IconButton name="next" onClick={handleNextClick}><NextIcon
-              size="sm"/></IconButton></Control>
+          <Control>
+            <IconButton name="next" onClick={handleNextClick}><NextIcon
+                size="sm"/></IconButton>
+          </Control>
         </Controls>
 
         <SeekerWrapper><Seeker
@@ -134,4 +141,6 @@ const MusicPlayer = () => {
 
 export default MusicPlayer;
 
-MusicPlayer.propTypes = {};
+MusicPlayer.propTypes = {
+  url: PropTypes.string.isRequired,
+};

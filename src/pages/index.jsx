@@ -14,13 +14,13 @@ const IndexContainer = styled.main`
   width: ${props => props.theme.mainWidth};
   height: 100vh;
   padding: ${props => props.theme.spacing.xs};
-  //border: 1px solid cyan;
 `;
 
 const IndexPage = () => {
   return (<Layout>
     <IndexContainer>
-      <MusicPlayer/>
+      <MusicPlayer
+          url="https://soundcloud.com/polo-g/sets/polo-g?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"/>
       <Expandable onClick={(expanded) => console.log('expanded? ' + expanded)}>
         <TrackList/>
       </Expandable>
