@@ -27,7 +27,7 @@ const thumbCss = css`
   height: 16px;
   width: 4px;
   border-radius: 0;
-  background: #ffffff;
+  background: ${props => props.theme.color};
   cursor: pointer;
   margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 `;

@@ -24,7 +24,7 @@ const PlayerContainer = styled(MainSection)`
 const Control = styled.div`
   font-size: 32px;
   padding: 0.75em;
-  color: white;
+  color: ${props => props.theme.color};
 `;
 const Title = styled.h3`
   //letter-spacing: 0.1em;
@@ -99,6 +99,7 @@ const MusicPlayer = ({url}) => {
     });
 
     internalPlayer.getCurrentSound(val => {
+      // TODO update current track with current sound object?
       console.info('current sound', val);
     });
   };
@@ -126,6 +127,14 @@ const MusicPlayer = ({url}) => {
     });
   };
 
+  // TODO ?
+  const handlePlayerProgress = (newProgress) => {
+    console.log('onProgress', newProgress);
+    // We only want to update time slider if we are not currently seeking
+    // if (!playerState.seeking) {
+    //   setPlayerState(prevState => ({...prevState, progress: newProgress}));
+    // }
+  };
   const handlePlayerDuration = (newDuration) => {
     setPlayerState(state => ({...state, duration: newDuration}));
   };
@@ -147,6 +156,7 @@ const MusicPlayer = ({url}) => {
               onPlay={handlePlayerPlay}
               onPause={handlePlayerPause}
               onReady={handlePlayerReady}
+              onProgress={handlePlayerProgress}
               onDuration={handlePlayerDuration}
               onError={handlePlayerError}
               config={{

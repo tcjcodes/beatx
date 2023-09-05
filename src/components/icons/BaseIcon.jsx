@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {IconContext} from 'react-icons';
 
 const StyleWrapper = styled.span`
-  color: #fff;
+  color: ${props => props.theme.color};
 `;
 
 const BaseIcon = ({size, children}) => {

@@ -6,7 +6,7 @@ const TrackContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 16px 24px;
-  border: ${props => props.$active ? '2px solid #fff' : 'none'};
+  border: ${props => props.$active ? `2px solid ${props.theme.color}` : 'none'};
 `;
 const Track = ({active, title, date}) => (
     <TrackContainer $active={active}>

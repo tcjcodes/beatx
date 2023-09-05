@@ -18,7 +18,7 @@ const getTrackDate = ({created_at, display_date, last_modified}) => {
 const TrackList = () => {
   const {musicState: {tracks, currentTrackIndex}} = useContext(
       MusicContext);
-  console.info('tracks', tracks, 'index', currentTrackIndex);
+  console.debug('tracks', tracks, 'index', currentTrackIndex);
 
   return (<TrackListContainer>
     {tracks.map((track, i) => <Track

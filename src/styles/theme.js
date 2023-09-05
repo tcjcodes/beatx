@@ -3,7 +3,7 @@ const BASE_SPACING_UNIT = 'px';
 
 const theme = {
   background: 'black',
-  color: 'white',
+  color: '#dbdbdb',
   spacing: {
     base: BASE_SPACING,
     unit: BASE_SPACING_UNIT,

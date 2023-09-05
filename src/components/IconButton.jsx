@@ -11,10 +11,7 @@ const StyledButton = styled.button`
 const IconButton = ({onClick, name, children}) => <StyledButton
     type="button"
     name={name}
-    onClick={() => {
-      console.log('clicked button');
-      onClick && onClick();
-    }}>
+    onClick={onClick}>
   {children}
 </StyledButton>;
 
