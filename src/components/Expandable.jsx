@@ -29,9 +29,9 @@ const ExpandableContent = styled.div`
   transition: opacity 0.5s linear;
 `;
 
-const Expandable = ({onClick, children}) => {
+const Expandable = ({defaultExpanded, onClick, children}) => {
 
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(defaultExpanded);
   const handleExpanded = () => {
     setExpanded(curExpanded => !curExpanded);
     onClick && onClick(expanded);
@@ -48,5 +48,7 @@ const Expandable = ({onClick, children}) => {
 export default Expandable;
 
 Expandable.propTypes = {
+  defaultExpanded: PropTypes.bool,
   onClick: PropTypes.func,
+  children: PropTypes.node.isRequired,
 };

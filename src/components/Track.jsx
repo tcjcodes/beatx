@@ -11,7 +11,8 @@ const TrackContainer = styled.div`
 const Track = ({active, title, date}) => (
     <TrackContainer $active={active}>
       <span>{title}</span>
-      <span>{date ? date.toLocaleDateString() : ''}</span>
+      <span>{date ? date.toLocaleDateString('en-US',
+          {day: '2-digit', year: 'numeric', month: '2-digit'}) : ''}</span>
     </TrackContainer>
 );
 

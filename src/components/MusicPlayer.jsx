@@ -86,11 +86,21 @@ const MusicPlayer = ({url}) => {
   const handlePrevClick = () => {
     const internalPlayer = playerRef.current.getInternalPlayer();
     internalPlayer.prev();
+    internalPlayer.getCurrentSoundIndex(index => {
+      setCurrentTrackIndex(index);
+    });
   };
 
   const handleNextClick = () => {
     const internalPlayer = playerRef.current.getInternalPlayer();
     internalPlayer.next();
+    internalPlayer.getCurrentSoundIndex(index => {
+      setCurrentTrackIndex(index);
+    });
+
+    internalPlayer.getCurrentSound(val => {
+      console.info('current sound', val);
+    });
   };
 
   const handlePlayerPlay = () => {
@@ -133,14 +143,29 @@ const MusicPlayer = ({url}) => {
           <ReactPlayer
               ref={playerRef}
               url={url}
-              width="100%"
-              height="100%"
               playing={playing}
               onPlay={handlePlayerPlay}
               onPause={handlePlayerPause}
               onReady={handlePlayerReady}
               onDuration={handlePlayerDuration}
               onError={handlePlayerError}
+              config={{
+                soundcloud: {
+                  buying: false,
+                  sharing: false,
+                  download: false,
+                  show_artwork: false,
+                  show_playcount: false,
+                  show_user: false,
+                },
+              }}
+              style={{
+                visibility: 'hidden',
+                width: 0,
+                height: 0,
+              }}
+              width="0"
+              height="0"
           />
         </PlayerWrapper>
 
