@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 const ButtonWrapper = styled.div`
   text-align: right;
-  // align with Track border:
-  //margin-right: 2px;
 `;
 
 const ExpandBtn = styled.button.attrs(props => ({
@@ -25,9 +23,6 @@ const ExpandableContent = styled.div`
   opacity: ${props => props.$expanded ? 1 : 0};
   animation: fadeIn 1s linear;
   transition: opacity 0.5s linear;
-
-  //height: 100%;
-  //overflow-y: scroll;
 `;
 
 const Expandable = ({defaultExpanded, onClick, children}) => {

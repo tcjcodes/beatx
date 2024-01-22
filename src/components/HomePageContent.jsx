@@ -6,12 +6,12 @@ import {MusicContext} from './MusicContext';
 import MusicPlayer from './MusicPlayer';
 import TrackList from './TrackList';
 
-const MusicPlayerWrapper = styled(MainSection)`
-  border: 1px solid green;
-  padding-bottom: ${props => props.theme.spacing.lg};
+const MusicPlayerSection = styled(MainSection)`
+  //border: 1px solid green;
+  padding-bottom: ${props => props.theme.spacing.md};
 `;
-const ExpandableWrapper = styled(MainSection)`
-  border: 1px solid cyan;
+const ExpandableSection = styled(MainSection)`
+  //border: 1px solid cyan;
   height: 40%;
   overflow-y: scroll;
 `;
@@ -20,18 +20,17 @@ const HomePageContent = () => {
   const {musicState: {tracks}} = useContext(MusicContext);
   return (
       <React.Fragment>
-        {/*<Spacer/>*/}
-        <MusicPlayerWrapper>
+        <MusicPlayerSection>
           <MusicPlayer/>
-        </MusicPlayerWrapper>
+        </MusicPlayerSection>
 
-        <ExpandableWrapper>
+        <ExpandableSection>
           {tracks.length > 0 && <Expandable
-              defaultExpanded
+              defaultExpanded={false}
               onClick={(expanded) => console.log('expanded? ' + expanded)}>
             <TrackList/>
           </Expandable>}
-        </ExpandableWrapper>
+        </ExpandableSection>
       </React.Fragment>
   );
 };
