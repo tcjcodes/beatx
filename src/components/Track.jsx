@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const TrackContainer = styled.a`
   display: flex;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: ${props => props.theme.spacing.sm};
   border: ${props => props.$active ? `2px solid ${props.theme.color}` : 'none'};
 
   text-decoration: none;

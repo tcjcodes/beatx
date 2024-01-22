@@ -7,12 +7,12 @@ import {MusicContextProvider} from '../components/MusicContext';
 const IndexContainer = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin: 0 auto;
   width: ${props => props.theme.mainWidth};
   height: 100vh;
-  padding: ${props => props.theme.spacing.xs};
+  padding: 0 ${props => props.theme.spacing.xs};
 `;
 
 const IndexPage = () => {

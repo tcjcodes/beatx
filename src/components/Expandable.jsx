@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import MainSection from './MainSection';
 
-const ExpandContainer = styled(MainSection)`
+const ButtonWrapper = styled.div`
   text-align: right;
   // align with Track border:
-  margin-right: 2px;
+  //margin-right: 2px;
 `;
 
 const ExpandBtn = styled.button.attrs(props => ({
@@ -27,8 +26,8 @@ const ExpandableContent = styled.div`
   animation: fadeIn 1s linear;
   transition: opacity 0.5s linear;
 
-  height: 100%;
-  overflow-y: scroll;
+  //height: 100%;
+  //overflow-y: scroll;
 `;
 
 const Expandable = ({defaultExpanded, onClick, children}) => {
@@ -39,10 +38,14 @@ const Expandable = ({defaultExpanded, onClick, children}) => {
   };
 
   return (
-      <ExpandContainer><ExpandBtn onClick={handleExpanded}>
-        {expanded ? 'less ↑' : 'more ↓'}</ExpandBtn>
+      <React.Fragment>
+        <ButtonWrapper>
+          <ExpandBtn onClick={handleExpanded}>
+            {expanded ? 'less ↑' : 'more ↓'}
+          </ExpandBtn>
+        </ButtonWrapper>
         <ExpandableContent $expanded={expanded}>{children}</ExpandableContent>
-      </ExpandContainer>)
+      </React.Fragment>)
       ;
 };
 

@@ -10,16 +10,14 @@ import {MusicContext} from './MusicContext';
 import Seeker from './Seeker';
 import MainSection from './MainSection';
 
-const PlayerContainer = styled(MainSection)`
-  margin-top: 30%;
-  margin-bottom: ${props => props.theme.spacing.md};
+const PlayerContainer = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  //border: 1px solid cyan;
   //min-height: 160px;
+
 `;
 const Control = styled.div`
   font-size: 32px;
