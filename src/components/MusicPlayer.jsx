@@ -1,5 +1,4 @@
 import React, {useContext, useRef, useState} from 'react';
-import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player/soundcloud';
 import styled from 'styled-components';
 import IconButton from './IconButton';
@@ -12,13 +11,14 @@ import Seeker from './Seeker';
 import MainSection from './MainSection';
 
 const PlayerContainer = styled(MainSection)`
-  margin-top: 70%;
-  margin-bottom: ${8 * 12}px;
+  margin-top: 30%;
+  margin-bottom: ${props => props.theme.spacing.md};
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  //border: 1px solid cyan;
   //min-height: 160px;
 `;
 const Control = styled.div`

@@ -7,7 +7,6 @@ const ExpandContainer = styled(MainSection)`
   text-align: right;
   // align with Track border:
   margin-right: 2px;
-  //border: 1px solid orange;
 `;
 
 const ExpandBtn = styled.button.attrs(props => ({
@@ -27,10 +26,12 @@ const ExpandableContent = styled.div`
   opacity: ${props => props.$expanded ? 1 : 0};
   animation: fadeIn 1s linear;
   transition: opacity 0.5s linear;
+
+  height: 100%;
+  overflow-y: scroll;
 `;
 
 const Expandable = ({defaultExpanded, onClick, children}) => {
-
   const [expanded, setExpanded] = useState(defaultExpanded);
   const handleExpanded = () => {
     setExpanded(curExpanded => !curExpanded);
@@ -48,6 +49,9 @@ const Expandable = ({defaultExpanded, onClick, children}) => {
 export default Expandable;
 
 Expandable.propTypes = {
+  /**
+   * is this expanded by default? Initial state.
+   */
   defaultExpanded: PropTypes.bool,
   onClick: PropTypes.func,
   children: PropTypes.node.isRequired,

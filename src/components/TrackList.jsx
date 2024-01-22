@@ -5,9 +5,8 @@ import Track from './Track';
 import MainSection from './MainSection';
 
 const TrackListContainer = styled(MainSection)`
-  //border: 1px solid grey;
   width: ${props => props.theme.mainWidth};
-  padding: 8px 0;
+  padding: ${props => props.theme.spacing.xs} 0;
 `;
 
 const getTrackDate = ({created_at, display_date, last_modified}) => {
