@@ -2,21 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const TrackContainer = styled.a`
+const TrackButton = styled.button`
   display: flex;
   justify-content: space-between;
   padding: ${props => props.theme.spacing.sm};
   border: ${props => props.$active ? `2px solid ${props.theme.color}` : 'none'};
 
-  text-decoration: none;
+  //text-decoration: none;
+  background: none;
+  width: 100%;
   color: ${props => props.theme.color};
+
+  // FIXME: Should onClick not be used? Or have handler figure it out?
+  cursor: ${props => props.$active ? 'inherit' : 'pointer'};
+  font-family: ${props => props.theme.fontFamily};
 `;
 const Track = ({active, title, date, onClick}) => (
-    <TrackContainer title={title} href="" onClick={onClick} $active={active}>
+    <TrackButton title={title} onClick={onClick} $active={active}>
       <span>{title}</span>
       <span>{date ? date.toLocaleDateString('en-US',
           {day: '2-digit', year: 'numeric', month: '2-digit'}) : ''}</span>
-    </TrackContainer>
+    </TrackButton>
 );
 
 export default Track;
