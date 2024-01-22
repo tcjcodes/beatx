@@ -15,16 +15,28 @@ const getTrackDate = ({created_at, display_date, last_modified}) => {
 };
 
 const TrackList = () => {
-  const {musicState: {tracks, currentTrackIndex}} = useContext(
+  const {
+    musicState: {
+      tracks,
+      currentTrackIndex,
+    },
+    setCurrentTrackIndex,
+  } = useContext(
       MusicContext);
   console.debug('tracks', tracks, 'index', currentTrackIndex);
 
+  const makeTrackClickHandler = (index) => () => {
+    console.info('track clicked', index);
+    setCurrentTrackIndex(index);
+  };
   return (<TrackListContainer>
     {tracks.map((track, i) => <Track
         key={track.id}
         active={i === currentTrackIndex}
         title={track.title || '-'}
-        date={getTrackDate(track)}/>)}
+        date={getTrackDate(track)}
+        onClick={makeTrackClickHandler(i)}
+    />)}
   </TrackListContainer>);
 };
 

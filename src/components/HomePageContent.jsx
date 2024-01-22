@@ -26,7 +26,7 @@ const HomePageContent = () => {
 
         <ExpandableSection>
           {tracks.length > 0 && <Expandable
-              defaultExpanded={false}
+              defaultExpanded
               onClick={(expanded) => console.log('expanded? ' + expanded)}>
             <TrackList/>
           </Expandable>}
