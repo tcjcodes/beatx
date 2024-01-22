@@ -14,10 +14,11 @@ const mockState = {
 };
 export const MusicContextProvider = ({children}) => {
   const [state, setState] = useState({
-    tracks: [],
-    currentTrack: null,
-    currentTrackIndex: -1,
-    url: SOUNDCLOUD_PLAYLIST_URL,
+    ...mockState,
+    // tracks: [],
+    // currentTrack: null,
+    // currentTrackIndex: -1,
+    // url: SOUNDCLOUD_PLAYLIST_URL,
   });
 
   const setTracks = (tracks) => {
