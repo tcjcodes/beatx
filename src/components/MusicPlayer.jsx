@@ -8,7 +8,6 @@ import PlayIcon from './icons/PlayIcon';
 import NextIcon from './icons/NextIcon';
 import {MusicContext} from './MusicContext';
 import Seeker from './Seeker';
-import MainSection from './MainSection';
 
 const PlayerContainer = styled.div`
   text-align: center;
@@ -48,12 +47,14 @@ const PlayerWrapper = styled.div`
 `;
 const MusicPlayer = () => {
   console.debug('render MusicPlayer');
+
   const {
     musicState,
     setTracks,
     setCurrentTrackIndex,
   } = useContext(MusicContext);
   const {currentTrack, url} = musicState;
+  console.debug('musicState:', musicState);
 
   const playerRef = useRef();
   const [playerState, setPlayerState] = useState({
@@ -65,28 +66,34 @@ const MusicPlayer = () => {
     // buffer: true,
   });
   const {duration, playing, played} = playerState;
+  console.debug('playerState:', playerState);
 
   // Seeker handlers
   const handleSeekMouseDown = () => {
+    console.debug('seek mouse down');
     setPlayerState(state => ({...state, seeking: true}));
   };
 
   const handleSeekChange = (value) => {
+    console.debug('seek change', value);
     setPlayerState(state => ({...state, played: value}));
   };
 
   const handleSeekMouseUp = (value) => {
+    console.debug('seek mouse up, seeking to:', value);
     setPlayerState(state => ({...state, seeking: false}));
     playerRef.current.seekTo(value);
   };
 
   // custom player handlers
   const handlePrevClick = () => {
+    console.debug('prev button clicked');
     const internalPlayer = playerRef.current.getInternalPlayer();
     internalPlayer.prev();
   };
 
   const handleNextClick = () => {
+    console.debug('next button clicked');
     const internalPlayer = playerRef.current.getInternalPlayer();
     internalPlayer.next();
 
@@ -97,16 +104,22 @@ const MusicPlayer = () => {
   };
 
   const handlePlayerPlay = () => {
+    console.debug('player play');
+    debugger;
     setPlayerState(state => ({...state, playing: true}));
     const internalPlayer = playerRef.current.getInternalPlayer();
     internalPlayer.getCurrentSoundIndex(index => {
       setCurrentTrackIndex(index);
     });
   };
+
   const handlePlayerPause = () => {
+    console.debug('player pause');
     setPlayerState(state => ({...state, playing: false}));
   };
+
   const handlePlayPauseClick = () => {
+    console.debug('play/pause button clicked');
     setPlayerState(state => ({...state, playing: !state.playing}));
   };
 
@@ -125,13 +138,16 @@ const MusicPlayer = () => {
 
   // TODO ?
   const handlePlayerProgress = (newProgress) => {
+    console.debug('player progress:', newProgress);
     // console.log('onProgress', newProgress);
     // We only want to update time slider if we are not currently seeking
     // if (!playerState.seeking) {
     //   setPlayerState(prevState => ({...prevState, progress: newProgress}));
     // }
   };
+
   const handlePlayerDuration = (newDuration) => {
+    console.debug('player duration', newDuration);
     setPlayerState(state => ({...state, duration: newDuration}));
   };
 
