@@ -70,7 +70,7 @@ const SliderInput = styled.input.attrs(() => ({
 const CompletionBar = styled.div`
   position: relative;
   top: 0;
-  width: ${props => `${props.percent}%`};
+  width: ${props => `${props.$percent}%`};
 
   height: ${SLIDER_HEIGHT_PX}px;
   background-color: rgba(255, 255, 255, 1.0);
@@ -104,7 +104,7 @@ const Seeker = ({duration, played, onChange, onMouseDown, onMouseUp}) => {
           onMouseDown={onMouseDown}
           onMouseUp={handleMouseUp}
           value={played}/>
-      <CompletionBar percent={percentPlayed}/>
+      <CompletionBar $percent={percentPlayed}/>
     </SliderContainer>
     <TimestampContainer>
       <Duration
