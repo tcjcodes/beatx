@@ -6,9 +6,8 @@ const ButtonWrapper = styled.div`
   text-align: right;
 `;
 
-const ExpandBtn = styled.button.attrs(props => ({
+const ExpandBtn = styled.button.attrs(() => ({
   type: 'button',
-  ['aria-expanded']: !!props.$expanded,
 }))`
   background: none;
   color: ${props => props.theme.color};
