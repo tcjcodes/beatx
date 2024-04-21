@@ -6,7 +6,10 @@ const TrackButton = styled.button`
   display: flex;
   justify-content: space-between;
   padding: ${props => props.theme.spacing.sm};
-  border: ${props => props.$active ? `2px solid ${props.theme.color}` : 'none'};
+  border-color: ${props => props.$active ? props.theme.color
+          : props.theme.background};
+  border-width: 2px;
+  border-style: solid;
 
   //text-decoration: none;
   background: none;
