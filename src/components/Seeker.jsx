@@ -1,6 +1,9 @@
-import React, {useState} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import styled, {css} from 'styled-components';
+import Duration from './Duration';
 
+const SEEKER_MAX = 1;
 /**
  * Slider CSS adapted from:
  * @source https://codepen.io/RajanLad/pen/MWaEyNp
@@ -22,17 +25,18 @@ const thumbCss = css`
   box-shadow: none;
   border: none;
   height: 16px;
-  width: 8px;
+  width: 4px;
   border-radius: 0;
-  background: #ffffff;
+  background: ${props => props.theme.color};
   cursor: pointer;
   margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 `;
+
 const SliderInput = styled.input.attrs(() => ({
   type: 'range',
   min: 0,
-  max: 100,
+  max: SEEKER_MAX,
+  step: 'any',
 }))`
   position: absolute;
   top: -2px;
@@ -46,43 +50,27 @@ const SliderInput = styled.input.attrs(() => ({
   -webkit-transition: .2s;
   transition: opacity .2s;
 
+  &:focus, &:hover, &:active {
+    box-shadow: inherit;
+  }
+
   &::-webkit-slider-thumb {
-    box-shadow: none;
-    border: none;
-    height: 16px;
-    width: 8px;
-    border-radius: 0;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+    ${thumbCss}
   }
 
   &::-moz-range-thumb {
-    box-shadow: none;
-    border: none;
-    height: 16px;
-    width: 8px;
-    border-radius: 0;
-    background: #ffffff;
-    cursor: pointer;
+    ${thumbCss}
   }
 
   &::-ms-thumb {
-    box-shadow: none;
-    border: none;
-    height: 16px;
-    width: 8px;
-    border-radius: 0;
-    background: #ffffff;
-    cursor: pointer;
+    ${thumbCss}
   }
 `;
 
 const CompletionBar = styled.div`
   position: relative;
   top: 0;
-  width: ${props => `${props.value}%`};
+  width: ${props => `${props.$percent}%`};
 
   height: ${SLIDER_HEIGHT_PX}px;
   background-color: rgba(255, 255, 255, 1.0);
@@ -96,23 +84,45 @@ const TimestampContainer = styled.div`
   font-size: 0.85em;
 `;
 
-const Seeker = () => {
-  const [value, setValue] = useState(0);
+const Seeker = ({duration, played, onChange, onMouseDown, onMouseUp}) => {
+  const elapsedSecs = duration * played;
+  const remainingSecs = duration * (1 - played);
+  const percentPlayed = Math.ceil(played * 100);
+
+  const handleChange = (e) => {
+    onChange && onChange(parseFloat(e.target.value));
+  };
+
+  const handleMouseUp = (e) => {
+    onMouseUp && onMouseUp(parseFloat(e.target.value));
+  };
 
   return (<SeekerContainer>
     <SliderContainer>
       <SliderInput
-          onChange={(e) => setValue(e.target.value)}
-          value={value}/>
-      <CompletionBar value={value}/>
+          onChange={handleChange}
+          onMouseDown={onMouseDown}
+          onMouseUp={handleMouseUp}
+          value={played}/>
+      <CompletionBar $percent={percentPlayed}/>
     </SliderContainer>
     <TimestampContainer>
-      <span>01:26</span>
-      <span>02:18</span>
+      <Duration
+          data-testid="playTimeElapsed"
+          seconds={elapsedSecs}/>
+      <Duration
+          data-testid="playTimeRemaining"
+          seconds={remainingSecs}/>
     </TimestampContainer>
   </SeekerContainer>);
 };
 
 export default Seeker;
 
-Seeker.propTypes = {};
+Seeker.propTypes = {
+  duration: PropTypes.number.isRequired,
+  played: PropTypes.number.isRequired,
+  onChange: PropTypes.func,
+  onMouseUp: PropTypes.func,
+  onMouseDown: PropTypes.func,
+};

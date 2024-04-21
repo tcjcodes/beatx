@@ -1,50 +1,1182 @@
 [
   {
-    "title": "Lorem Ipsum",
-    "track": 11
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701302-5pdo9c-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 300,
+    "created_at": "2018-05-28T16:31:49Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 297770,
+    "full_duration": 297770,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "id": 450289893,
+    "kind": "track",
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 10377,
+    "permalink": "polo-g-x-check-me-out-shot-by",
+    "permalink_url": "https://soundcloud.com/polo-g/polo-g-x-check-me-out-shot-by",
+    "playback_count": 711474,
+    "public": true,
+    "publisher_metadata": {
+      "id": 450289893,
+      "urn": "soundcloud:tracks:450289893",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905543"
+    },
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 231,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "Polo G X Check Me Out | Shot By @eamstreetlegend",
+    "uri": "https://api.soundcloud.com/tracks/450289893",
+    "urn": "soundcloud:tracks:450289893",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/rSdNDnjFixPL_m.json",
+    "display_date": "2018-05-28T16:31:49Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289893/ae7c5c65-ebe2-4466-bae3-9a6ad1220d65/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 297770,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289893/ae7c5c65-ebe2-4466-bae3-9a6ad1220d65/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 297770,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289893/6e515684-2d6c-4edb-9376-6e9693b81742/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 297770,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289893",
+    "station_permalink": "track-stations:450289893",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6ImMyN2UxZGU5LTNiOTktNGYzMi1hM2M4LWFhNDg0YjllN2U5OSIsImlhdCI6MTcxMzY2MjUzN30.BNXxa7AdYvTDiaaBIB7e9_dmhKCAwDGmoNkeS4HD7Vg",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "playable": true,
+    "_resource_id": 450289893,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 12
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701290-mwz5pv-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 393,
+    "created_at": "2018-05-28T16:31:48Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 156173,
+    "full_duration": 156173,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "id": 450289878,
+    "kind": "track",
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 24094,
+    "permalink": "polo-g-aka-mr-dotoomuch-2",
+    "permalink_url": "https://soundcloud.com/polo-g/polo-g-aka-mr-dotoomuch-2",
+    "playback_count": 1771140,
+    "public": true,
+    "publisher_metadata": {
+      "id": 450289878,
+      "urn": "soundcloud:tracks:450289878",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905538"
+    },
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 499,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "WE BALL",
+    "uri": "https://api.soundcloud.com/tracks/450289878",
+    "urn": "soundcloud:tracks:450289878",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/2jhVrXtMMMEn_m.json",
+    "display_date": "2018-05-28T16:31:48Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289878/f4be1ed0-7078-4de1-9e65-6ad99da9b652/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 156173,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289878/f4be1ed0-7078-4de1-9e65-6ad99da9b652/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 156173,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289878/09eb6676-aade-4aef-96d9-c56528728a13/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 156173,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289878",
+    "station_permalink": "track-stations:450289878",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6ImFlMDFkYjVjLTFjYTYtNDhkOS1hODI4LTliOGU3NGI1ZWYwYyIsImlhdCI6MTcxMzY2MjUzN30.VFQyBcH-BnvHWoaM4ILtnq8xk4GDbge7NylU9nAFBvU",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "playable": true,
+    "_resource_id": 450289878,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 13
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701281-rkenpg-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 664,
+    "created_at": "2018-05-28T16:31:46Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 165500,
+    "full_duration": 165500,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "id": 450289866,
+    "kind": "track",
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 26731,
+    "permalink": "polo-g-aka-mr-dotoomuch-1",
+    "permalink_url": "https://soundcloud.com/polo-g/polo-g-aka-mr-dotoomuch-1",
+    "playback_count": 1751214,
+    "public": true,
+    "publisher_metadata": {
+      "id": 450289866,
+      "urn": "soundcloud:tracks:450289866",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905537"
+    },
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 492,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "THE RACE REMIX",
+    "uri": "https://api.soundcloud.com/tracks/450289866",
+    "urn": "soundcloud:tracks:450289866",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/B4GpyVWz0whV_m.json",
+    "display_date": "2018-05-28T16:31:46Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289866/10b12bb8-c689-4b39-a886-7db275b744e4/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 165500,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289866/10b12bb8-c689-4b39-a886-7db275b744e4/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 165500,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289866/754752a3-9cb2-4beb-84a6-4ad4264c9532/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 165500,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289866",
+    "station_permalink": "track-stations:450289866",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjE5MGZkOWM5LTliMDAtNDM3ZC1hZDM0LWUwM2ZmOTQxZjRmNyIsImlhdCI6MTcxMzY2MjUzN30.lQ6FSokccnOQSL3gypuLKnzTJ37VNiJgNmIt5JYea7A",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "playable": true,
+    "_resource_id": 450289866,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 14
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701266-yptp74-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 309,
+    "created_at": "2018-05-28T16:31:44Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 148128,
+    "full_duration": 148128,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "id": 450289854,
+    "kind": "track",
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 18831,
+    "permalink": "polo-g-aka-mr-dotoomuch",
+    "permalink_url": "https://soundcloud.com/polo-g/polo-g-aka-mr-dotoomuch",
+    "playback_count": 1306898,
+    "public": true,
+    "publisher_metadata": {
+      "id": 450289854,
+      "urn": "soundcloud:tracks:450289854",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905536"
+    },
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 355,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "BITCH",
+    "uri": "https://api.soundcloud.com/tracks/450289854",
+    "urn": "soundcloud:tracks:450289854",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/FxpxmwvKu3W4_m.json",
+    "display_date": "2018-05-28T16:31:44Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289854/776686ff-4f80-482f-899e-a702127355af/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 148128,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289854/776686ff-4f80-482f-899e-a702127355af/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 148128,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289854/a77c786f-fe75-452d-91f6-e5b2c1b39cf1/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 148128,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289854",
+    "station_permalink": "track-stations:450289854",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjliYjJkNWFlLWFlNjgtNDExOC1hMmUyLTE3NTUwODRmNWVjNyIsImlhdCI6MTcxMzY2MjUzN30.X_dXKYWG3uWLDKN5CsxkKXYa_eIxGsbx-q29LBGVCSk",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "playable": true,
+    "_resource_id": 450289854,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 115
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701803-ki77hl-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 198,
+    "created_at": "2018-05-28T16:31:42Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 150270,
+    "full_duration": 150270,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "id": 450289836,
+    "kind": "track",
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 13298,
+    "permalink": "shit-remix-official-video-shot-by-soldiervisions",
+    "permalink_url": "https://soundcloud.com/polo-g/shit-remix-official-video-shot-by-soldiervisions",
+    "playback_count": 897986,
+    "public": true,
+    "publisher_metadata": {
+      "id": 450289836,
+      "urn": "soundcloud:tracks:450289836",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905544"
+    },
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 286,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "Shit Remix (Official Video) Shot By @SoldierVisions",
+    "uri": "https://api.soundcloud.com/tracks/450289836",
+    "urn": "soundcloud:tracks:450289836",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/FpluXbOzWIbV_m.json",
+    "display_date": "2018-05-28T16:31:42Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289836/a78ac21c-0a01-4aa0-bef4-c957b08dca9c/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 150270,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289836/a78ac21c-0a01-4aa0-bef4-c957b08dca9c/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 150270,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289836/8e46d64f-5b02-4113-b830-21095db48b85/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 150270,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289836",
+    "station_permalink": "track-stations:450289836",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6ImI2NWUwZmM2LWQwNTgtNGYxMC1hYzdhLWUxYjY3YWEwMGU3NiIsImlhdCI6MTcxMzY2MjUzN30.fuOu_4XEzfniVHlWULm51V9DFnb4frKz7nMxTLWIcpg",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "playable": true,
+    "_resource_id": 450289836,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 116
+    "id": 450289815,
+    "kind": "track",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "publisher_metadata": {
+      "id": 450289815,
+      "urn": "soundcloud:tracks:450289815",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905545"
+    },
+    "playable": true,
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701785-2c4gp9-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 384,
+    "created_at": "2018-05-28T16:31:40Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 399527,
+    "full_duration": 399527,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 22915,
+    "permalink": "troublesome-freestyle-official-video-shot-by-soldiervisions",
+    "permalink_url": "https://soundcloud.com/polo-g/troublesome-freestyle-official-video-shot-by-soldiervisions",
+    "playback_count": 1626458,
+    "public": true,
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 399,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "Troublesome (Freestyle) (Official Video) Shot By @SoldierVisions",
+    "uri": "https://api.soundcloud.com/tracks/450289815",
+    "urn": "soundcloud:tracks:450289815",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/sRzjXMtUsb8B_m.json",
+    "display_date": "2018-05-28T16:31:40Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289815/46956a29-f059-4d31-a77a-edc68212e761/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 399527,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289815/46956a29-f059-4d31-a77a-edc68212e761/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 399527,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289815/42e38af8-2679-49cb-8295-2b2433b5a4ad/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 399527,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289815",
+    "station_permalink": "track-stations:450289815",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjcwYTczOGM0LTA1ZTUtNDY3Ni1iZTM5LTUxYTk3YmY3MmQ2YiIsImlhdCI6MTcxMzY2MjUzOH0.ay8iUEne4vF7dxaKlcAKD8TlpRD-J5D6XwC-81Zo7Eo",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "_resource_id": 450289815,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 117
+    "id": 450289794,
+    "kind": "track",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "publisher_metadata": {
+      "id": 450289794,
+      "urn": "soundcloud:tracks:450289794",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905546"
+    },
+    "playable": true,
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701767-hrfjiv-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 551,
+    "created_at": "2018-05-28T16:31:38Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 239408,
+    "full_duration": 239408,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 35292,
+    "permalink": "welcome-back-shotbytimo",
+    "permalink_url": "https://soundcloud.com/polo-g/welcome-back-shotbytimo",
+    "playback_count": 2534500,
+    "public": true,
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 579,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "Welcome Back | @shotbytimo",
+    "uri": "https://api.soundcloud.com/tracks/450289794",
+    "urn": "soundcloud:tracks:450289794",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/5JU97Sqcjr64_m.json",
+    "display_date": "2018-05-28T16:31:38Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289794/9542aff2-6531-4e1a-97ff-119d8996df34/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 239408,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289794/9542aff2-6531-4e1a-97ff-119d8996df34/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 239408,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289794/58fedfd9-1853-4846-9f1a-b242731f5acf/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 239408,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289794",
+    "station_permalink": "track-stations:450289794",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjNlZTQ1MjAzLWI1NzItNDM4ZC05Y2Q4LTcwODYyZDcxMzdjYiIsImlhdCI6MTcxMzY2MjUzOH0.ZWskGY5xspmdJR3gr1yGx9iC7ciYs_XqneF55zQeSkg",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "_resource_id": 450289794,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 118
+    "id": 450289770,
+    "kind": "track",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "publisher_metadata": {
+      "id": 450289770,
+      "urn": "soundcloud:tracks:450289770",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905547"
+    },
+    "playable": true,
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701743-su9plm-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 464,
+    "created_at": "2018-05-28T16:31:36Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 155102,
+    "full_duration": 155102,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 25196,
+    "permalink": "who-run-it-remix",
+    "permalink_url": "https://soundcloud.com/polo-g/who-run-it-remix",
+    "playback_count": 1763789,
+    "public": true,
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 399,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "Who Run It Remix",
+    "uri": "https://api.soundcloud.com/tracks/450289770",
+    "urn": "soundcloud:tracks:450289770",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/RO5kQKhrei5O_m.json",
+    "display_date": "2018-05-28T16:31:36Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289770/101c8671-9a82-4f2c-b8d9-714bf5f74b43/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 155102,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289770/101c8671-9a82-4f2c-b8d9-714bf5f74b43/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 155102,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289770/9186105c-7dc0-41f7-8cdb-e821edd25b65/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 155102,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289770",
+    "station_permalink": "track-stations:450289770",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjI0M2Y2MGU1LWZmODItNGM2OS1hNDNjLTE4N2FmNGY5YmVmZSIsImlhdCI6MTcxMzY2MjUzOH0.AYRO3KyjqODVO5hyBfS2Y_eaZqZNqx1c359IkMPOTDc",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "_resource_id": 450289770,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 119
+    "id": 450289761,
+    "kind": "track",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "publisher_metadata": {
+      "id": 450289761,
+      "urn": "soundcloud:tracks:450289761",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905535"
+    },
+    "playable": true,
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353701734-xwnoqt-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 5052,
+    "created_at": "2018-05-28T16:31:34Z",
+    "description": "",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 186009,
+    "full_duration": 186009,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:02Z",
+    "license": "all-rights-reserved",
+    "likes_count": 306223,
+    "permalink": "neva-cared-remix-official-video-shot-by-dinerofilms",
+    "permalink_url": "https://soundcloud.com/polo-g/neva-cared-remix-official-video-shot-by-dinerofilms",
+    "playback_count": 28095562,
+    "public": true,
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 3602,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "Neva Cared [Remix] (Official Video) Shot By @DineroFilms",
+    "uri": "https://api.soundcloud.com/tracks/450289761",
+    "urn": "soundcloud:tracks:450289761",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/kuKnZ6ieJXRs_m.json",
+    "display_date": "2018-05-28T16:31:34Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289761/d1b53b33-be95-4c80-b7ff-19eaaf90f411/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 186009,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289761/d1b53b33-be95-4c80-b7ff-19eaaf90f411/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 186009,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450289761/beeece1f-c9c8-4f7e-9ee1-223b6940ce0c/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 186009,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450289761",
+    "station_permalink": "track-stations:450289761",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjVjNjA5ZDVkLThkNWUtNDYzNy1iNjcwLTNhMGM4MWI3YjFjOCIsImlhdCI6MTcxMzY2MjUzOH0.limc500a586I27QW4z1aO137__iN65-bKp6b7vqAegw",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "_resource_id": 450289761,
+    "_resource_type": "sound"
   },
   {
-    "title": "Lorem Ipsum",
-    "track": 11
-  },
-  {
-    "title": "Lorem Ipsum",
-    "track": 11
-  },
-  {
-    "title": "Lorem Ipsum",
-    "track": 11
+    "id": 450307902,
+    "kind": "track",
+    "monetization_model": "AD_SUPPORTED",
+    "policy": "MONETIZE",
+    "publisher_metadata": {
+      "id": 450307902,
+      "urn": "soundcloud:tracks:450307902",
+      "contains_music": true,
+      "publisher": "Copyright Control",
+      "isrc": "QZ67M1905542"
+    },
+    "playable": true,
+    "artwork_url": "https://i1.sndcdn.com/artworks-000353716368-t8gvsq-large.jpg",
+    "caption": null,
+    "commentable": true,
+    "comment_count": 1099,
+    "created_at": "2018-05-28T17:14:14Z",
+    "description": "Unsigned 19yr Old Polo.G   \"Die A Legend\" The mixtape coming soon!\nEmail:pologbookings@gmail.com\nIG:mr.dotoomuch\nFB:Polo Capalot\nSC:polo.buckz",
+    "downloadable": false,
+    "download_count": 0,
+    "duration": 153822,
+    "full_duration": 153822,
+    "embeddable_by": "all",
+    "genre": "",
+    "has_downloads_left": false,
+    "label_name": null,
+    "last_modified": "2024-01-22T05:00:00Z",
+    "license": "all-rights-reserved",
+    "likes_count": 104683,
+    "permalink": "polo-g-the-come-up",
+    "permalink_url": "https://soundcloud.com/polo-g/polo-g-the-come-up",
+    "playback_count": 8618652,
+    "public": true,
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": null,
+    "reposts_count": 1851,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "streamable": true,
+    "tag_list": "",
+    "title": "Polo G - The Come UP",
+    "uri": "https://api.soundcloud.com/tracks/450307902",
+    "urn": "soundcloud:tracks:450307902",
+    "user_id": 454955073,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/dFoABUFxrBqD_m.json",
+    "display_date": "2018-05-28T17:14:14Z",
+    "media": {
+      "transcodings": [
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450307902/bf03a7f0-aacb-47d0-aaff-3660af587391/stream/hls",
+          "preset": "mp3_0_0",
+          "duration": 153822,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450307902/bf03a7f0-aacb-47d0-aaff-3660af587391/stream/progressive",
+          "preset": "mp3_0_0",
+          "duration": 153822,
+          "snipped": false,
+          "format": {
+            "protocol": "progressive",
+            "mime_type": "audio/mpeg"
+          },
+          "quality": "sq"
+        },
+        {
+          "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:450307902/542db6d5-7011-4ff7-982f-2f47969a43ca/stream/hls",
+          "preset": "opus_0_0",
+          "duration": 153822,
+          "snipped": false,
+          "format": {
+            "protocol": "hls",
+            "mime_type": "audio/ogg; codecs=\"opus\""
+          },
+          "quality": "sq"
+        }
+      ]
+    },
+    "station_urn": "soundcloud:system-playlists:track-stations:450307902",
+    "station_permalink": "track-stations:450307902",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjI5OWMyMTU0LTdhYzYtNDhmMi1hMTg3LTRiNGJmYzFmZTYzNSIsImlhdCI6MTcxMzY2MjUzOH0.MHXZmPEoBthGSauSdNdAkCtQhmc65SFiOmPp_Bn7Z40",
+    "user": {
+      "avatar_url": "https://i1.sndcdn.com/avatars-DcCHlAipKT1my7rD-yPOGKQ-large.jpg",
+      "first_name": "Polo",
+      "followers_count": 1338677,
+      "full_name": "Polo CAPALOT",
+      "id": 454955073,
+      "kind": "user",
+      "last_modified": "2023-08-17T23:14:10Z",
+      "last_name": "CAPALOT",
+      "permalink": "polo-g",
+      "permalink_url": "https://soundcloud.com/polo-g",
+      "uri": "https://api.soundcloud.com/users/454955073",
+      "urn": "soundcloud:users:454955073",
+      "username": "POLO G",
+      "verified": true,
+      "city": "CHICAGO",
+      "country_code": "US",
+      "badges": {
+        "pro": false,
+        "pro_unlimited": false,
+        "verified": true
+      },
+      "station_urn": "soundcloud:system-playlists:artist-stations:454955073",
+      "station_permalink": "artist-stations:454955073"
+    },
+    "_resource_id": 450307902,
+    "_resource_type": "sound"
   }
 ]

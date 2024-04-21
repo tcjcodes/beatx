@@ -1,18 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import MainSection from './MainSection';
 
-const ExpandContainer = styled(MainSection)`
+const ButtonWrapper = styled.div`
   text-align: right;
-  // align with Track border:
-  margin-right: 2px;
-  //border: 1px solid orange;
 `;
 
-const ExpandBtn = styled.button.attrs(props => ({
+const ExpandBtn = styled.button.attrs(() => ({
   type: 'button',
-  ['aria-expanded']: !!props.$expanded,
 }))`
   background: none;
   color: ${props => props.theme.color};
@@ -29,24 +24,32 @@ const ExpandableContent = styled.div`
   transition: opacity 0.5s linear;
 `;
 
-const Expandable = ({onClick, children}) => {
-
-  const [expanded, setExpanded] = useState(false);
+const Expandable = ({defaultExpanded, onClick, children}) => {
+  const [expanded, setExpanded] = useState(defaultExpanded);
   const handleExpanded = () => {
     setExpanded(curExpanded => !curExpanded);
     onClick && onClick(expanded);
   };
 
   return (
-      <ExpandContainer><ExpandBtn onClick={handleExpanded}>
-        {expanded ? 'less ↑' : 'more ↓'}</ExpandBtn>
+      <React.Fragment>
+        <ButtonWrapper>
+          <ExpandBtn onClick={handleExpanded}>
+            {expanded ? 'less ↑' : 'more ↓'}
+          </ExpandBtn>
+        </ButtonWrapper>
         <ExpandableContent $expanded={expanded}>{children}</ExpandableContent>
-      </ExpandContainer>)
+      </React.Fragment>)
       ;
 };
 
 export default Expandable;
 
 Expandable.propTypes = {
+  /**
+   * is this expanded by default? Initial state.
+   */
+  defaultExpanded: PropTypes.bool,
   onClick: PropTypes.func,
+  children: PropTypes.node.isRequired,
 };
