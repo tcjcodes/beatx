@@ -6,19 +6,22 @@ export const MusicContext = createContext({});
 
 const SOUNDCLOUD_PLAYLIST_URL = 'https://soundcloud.com/polo-g/sets/polo-g?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
 
-const mockState = {
-  tracks: songs,
-  currentTrack: songs[0],
-  currentTrackIndex: 0,
-  url: '',
-};
+// FIXME doesn't work, maybe missing url?
+// const mockState = {
+//   tracks: songs,
+//   currentTrack: songs[0],
+//   currentTrackIndex: 0,
+//   url: '',
+// };
 export const MusicContextProvider = ({children}) => {
+  console.info('using mock songs');
+
   const [state, setState] = useState({
-    ...mockState,
-    // tracks: [],
-    // currentTrack: null,
-    // currentTrackIndex: -1,
-    // url: SOUNDCLOUD_PLAYLIST_URL,
+    // ...mockState,
+    tracks: [],
+    currentTrack: null,
+    currentTrackIndex: -1,
+    url: SOUNDCLOUD_PLAYLIST_URL,
   });
 
   const setTracks = (tracks) => {
